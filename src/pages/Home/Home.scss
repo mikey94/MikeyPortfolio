@@ -1,0 +1,284 @@
+@import '../../utils/colors/colors.scss';
+
+.home-wrapper {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+.intro-background {
+    display: flex;
+    height: 35rem;
+    width: 100%;
+    object-fit: cover;
+}
+.intro-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: $main;
+    padding: 50px 100px 50px 100px;
+}
+
+.intro-title {
+    font-size: 5rem;
+}
+
+.social-title {
+    font-size: 4rem;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.intro-desc {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 0 20px;
+    font-size: 20px;
+    align-self: center;
+}
+
+.intro-image {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.intro-image-logo {
+    display: flex;
+    width: 35rem;
+    height: 25rem;
+    // margin: 2rem;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+h1 {
+    padding: 0 10px 0 0;
+    font-family: 'Share Tech Mono', monospace;
+    color: $white;
+}
+
+h2 {
+    padding: 0 10px 0 0;
+    font-family: 'Share Tech Mono', monospace;
+    color: $white;
+}
+
+h3 {
+    padding: 0 10px 0 0;
+    font-family: 'Share Tech Mono', monospace;
+    color: $white;
+}
+
+button {
+    :hover {
+        color: $secondary;
+    }
+}
+
+.about-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    background-color: $main;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 50px 100px 50px 100px;
+}
+
+.about-show-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-button {
+    display: flex;
+    background-color: $green;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    height: 50px;
+    width: 250px;
+    border: 0;
+    box-shadow: 3px 3px 3px $secondary;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.projects-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    background-color: $secondary;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 50px 100px 50px 100px;
+}
+.project-show-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-list {
+    display: flex;
+    flex: 1;
+    width: 60rem;
+    white-space: nowrap;
+    flex-direction: row;
+    position: relative;
+    overflow-x: scroll;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.project-button {
+    display: flex;
+    background-color: $green;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    height: 50px;
+    width: 250px;
+    border: 0;
+    box-shadow: 3px 3px 3px $secondary;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.find-me-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: $secondary;
+    align-items: center;
+    text-align: center;
+    padding: 50px 100px 50px 100px;
+}
+
+.social-connect {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+.social-button {
+    display: flex;
+    background-color: $green;
+    border-radius: 50rem;
+    height: 8rem;
+    width: 8rem;
+    border: none;
+    margin: 20px 20px 50px 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.social-logo {
+    width: 8rem;
+    height: 8rem;
+}
+
+.all-rights-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    background-color: $green;
+    padding-right: 50px;
+}
+
+@media screen and (max-width: 600px) {
+    .intro-background {
+        height: 25rem;
+    }
+    .intro-image {
+        flex: 1;
+        justify-content: center;
+        opacity: 0.2;
+    }
+    .intro-desc {
+        flex: 1;
+        position: absolute;
+        text-align: left;
+        padding: 0 0 0 30px;
+    }
+    .intro-image-logo {
+        margin: 0rem;
+    }
+    .intro-wrapper {
+        padding: 50px 30px 50px 30px;
+    }
+    .about-wrapper {
+        padding: 50px 30px 50px 30px;
+    }
+    .projects-wrapper {
+        padding: 50px 30px 50px 30px;
+    }
+    .project-show-wrapper {
+        flex: 1;
+        position: absolute;
+        z-index: 10;
+    }
+    .about-show-wrapper {
+        flex: 1;
+        position: absolute;
+        z-index: 10;
+    }
+    .item-list {
+        width: 30rem;
+        margin-left: 10rem;
+    }
+    .contact-wrapper {
+        padding: 50px 30px 50px 30px;
+    }
+    .contact-input-email {
+        width: 15rem;
+    }
+    .contact-input-message {
+        width: 15rem;
+    }
+    .all-rights-wrapper {
+        padding-right: 0 !important;
+    }
+    .find-me-wrapper {
+        padding: 50px 30px 50px 30px;
+    }
+    .social-connect {
+        padding: 0 10px 0 10px;
+    }
+    .social-title {
+        font-size: 3rem;
+        margin: 0 !important;
+    }
+    .social-button {
+        height: 5rem;
+        width: 5rem;
+        margin: 10px;
+    }
+    .social-logo {
+        height: 4rem;
+        width: 4rem;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    // .intro-image {
+    //     flex: 1;
+    //     justify-content: center;
+    //     opacity: 0.2;
+    // }
+    // .intro-desc {
+    //     flex: 1;
+    //     position: absolute;
+    //     text-align: center;
+    //     padding: 20px 0 10px 10px;
+    // }
+    // .intro-image-logo {
+    //     margin: 0rem;
+    // }
+}

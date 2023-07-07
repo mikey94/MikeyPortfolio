@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2dd58ab7.css",
+    "main.js": "/static/js/main.224ca04e.js",
+    "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
+    "static/media/buwa.png": "/static/media/buwa.a8394f1f653c3d6f5983.png",
+    "static/media/lego.ttf": "/static/media/lego.e219a24dca6c51b29ba6.ttf",
+    "index.html": "/index.html",
+    "main.2dd58ab7.css.map": "/static/css/main.2dd58ab7.css.map",
+    "main.224ca04e.js.map": "/static/js/main.224ca04e.js.map",
+    "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2dd58ab7.css",
+    "static/js/main.224ca04e.js"
+  ]
+}

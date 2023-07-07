@@ -1,0 +1,238 @@
+@import '../../utils/colors/colors.scss';
+
+
+.home-wrapper-project {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+.intro-background-project {
+    display: flex;
+    height: 35rem;
+    width: 100%;
+    object-fit: cover;
+}
+.intro-wrapper-project {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $main;
+}
+
+.intro-title-project {
+    font-size: 3rem;
+    margin-left: 2rem;
+}
+
+.social-title-project {
+    font-size: 4rem;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.intro-desc-project {
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    padding: 20px 0 0 20px;
+    font-size: 20px;
+}
+
+.intro-image-project {
+    display: flex;
+    flex: 2;
+    justify-content: flex-end;
+}
+
+.intro-image-logo-project {
+    display: flex;
+    width: 35rem;
+    height: 25rem;
+    margin: 2rem;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+h1 {
+    padding: 0 10px 0 0;
+    font-family: 'Share Tech Mono', monospace;
+    color: $white;
+}
+
+h2 {
+    padding: 0 10px 0 0;
+    font-family: 'Share Tech Mono', monospace;
+    color: $white;
+}
+
+h3 {
+    padding: 0 10px 0 0;
+    font-family: 'Share Tech Mono', monospace;
+    color: $white;
+}
+
+button {
+    :hover {
+        color: $secondary;
+    }
+}
+
+.projects-wrapper-project {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: $secondary;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    padding: 50px 100px 50px 100px;
+}
+.project-show-wrapper-project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-list-project-project {
+    display: flex;
+    flex: 1;
+    width: 60rem;
+    white-space: nowrap;
+    flex-direction: row;
+    position: relative;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.project-button-project {
+    display: flex;
+    background-color: $green;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    height: 50px;
+    width: 250px;
+    border: 0;
+    box-shadow: 3px 3px 3px $secondary;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.find-me-wrapper-project {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: $secondary;
+    align-items: center;
+    text-align: center;
+    padding: 50px 100px 50px 100px;
+}
+
+.social-connect-project {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+.social-button-project {
+    display: flex;
+    background-color: $green;
+    border-radius: 50rem;
+    height: 8rem;
+    width: 8rem;
+    border: none;
+    margin: 20px 20px 50px 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.social-logo-project {
+    width: 8rem;
+    height: 8rem;
+}
+
+.all-rights-wrapper-project {
+    display: flex;
+    justify-content: flex-end;
+    background-color: $green;
+    padding-right: 50px;
+}
+
+@media screen and (max-width: 600px) {
+    .intro-background-project {
+        height: 25rem;
+    }
+    .intro-image-project {
+        flex: 1;
+        justify-content: center;
+        opacity: 0.2;
+    }
+    .intro-wrapper-project {
+        flex: 1;
+        height: auto;
+        z-index: 10;
+    }
+    .intro-desc-project {
+        flex: 1;
+        text-align: left;
+        padding: 0 0 0 30px;
+    }
+    .intro-image-logo-project {
+        margin: 0rem;
+    }
+    .projects-wrapper-project {
+        padding: 50px 30px 50px 30px;
+    }
+    .project-show-wrapper-project {
+        flex: 1;
+        position: absolute;
+        z-index: 10;
+    }
+    .item-list-project {
+        width: 30rem;
+        margin-left: 10rem;
+    }
+    .all-rights-wrapper-project {
+        padding-right: 0 !important;
+    }
+    .find-me-wrapper-project {
+        padding: 50px 30px 50px 30px;
+    }
+    .social-connect-project {
+        padding: 0 10px 0 10px;
+    }
+    .social-title-project {
+        font-size: 3rem;
+        margin: 0 !important;
+    }
+    .social-button-project {
+        height: 5rem;
+        width: 5rem;
+        margin: 10px;
+    }
+    .social-logo-project {
+        height: 4rem;
+        width: 4rem;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    // .intro-image {
+    //     flex: 1;
+    //     justify-content: center;
+    //     opacity: 0.2;
+    // }
+    // .intro-desc {
+    //     flex: 1;
+    //     position: absolute;
+    //     text-align: center;
+    //     padding: 20px 0 10px 10px;
+    // }
+    // .intro-image-logo {
+    //     margin: 0rem;
+    // }
+}
