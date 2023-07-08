@@ -204,7 +204,7 @@ button {
     flex-direction: column;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 480px) {
     .intro-background-about {
         height: 25rem;
     }
@@ -303,19 +303,37 @@ button {
     }
 }
 
-@media screen and (min-width: 600px) {
-    // .intro-image {
-    //     flex: 1;
-    //     justify-content: center;
-    //     opacity: 0.2;
-    // }
-    // .intro-desc {
-    //     flex: 1;
-    //     position: absolute;
-    //     text-align: center;
-    //     padding: 20px 0 10px 10px;
-    // }
-    // .intro-image-logo {
-    //     margin: 0rem;
-    // }
+// ipads, tablets
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .intro-desc-about {
+        position: absolute;
+    }
+    .intro-image-about {
+        justify-content: center;
+        opacity: 0.3;
+    }
+}
+// small screens, laptops
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .intro-wrapper-about {
+        padding: 50px 50px 50px 50px;
+    }
+    .intro-image-logo-about {
+        width: 20rem;
+    }
+}
+// large screens
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    .intro-wrapper-about {
+        padding: 50px 50px 50px 50px;  
+    }
+    .intro-image-logo-about {
+        width: 20rem;
+    }
+}
+// extra large
+@media screen and (min-width: 1201px) {
+    .intro-wrapper-about {
+        padding: 50px 50px 50px 50px;
+    }
 }
