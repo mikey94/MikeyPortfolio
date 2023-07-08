@@ -13,7 +13,7 @@ const Application: React.FunctionComponent<ApplicationProps> = () => {
             <BrowserRouter>
                 <Routes>
                     <Route element={<Navbar />}>
-                        <Route path="/" element={<HomePage />} />
+                        <Route index element={<HomePage />} />
                         <Route path="about" element={<AboutPage />} />
                         <Route path='projects' element={<ProjectPage />}/>
                     </Route>

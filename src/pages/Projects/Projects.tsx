@@ -51,12 +51,12 @@ function Projects() {
                 <div className="find-me-wrapper-project">
                     <h1>Find me on.</h1>
                     <div className="social-connect-project">
-                        <button className="social-button-project">
+                        <button className="social-button-project" onClick={() => window.location.assign('https://www.linkedin.com/in/buwaneka-ranatunga-649626103/')}>
                             <h1 className="social-title-project">In</h1>
                         </button>
-                        <button className="social-button-project">
+                        <button className="social-button-project" onClick={() => window.location.assign('https://www.behance.net/bsirinath338b')}>
                             {/* <img alt="git" src={GitLogo} className="social-logo" /> */}
-                            <h1 className="social-title-project">Tw</h1>
+                            <h1 className="social-title-project">Be</h1>
                         </button>
                         <button className="social-button-project">
                             <h1 className="social-title-project">S</h1>
