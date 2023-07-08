@@ -45,12 +45,12 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
             <div className="find-me-wrapper">
                 <h1>Find me on.</h1>
                 <div className="social-connect">
-                    <button className="social-button">
+                    <button className="social-button" onClick={() => window.location.assign('https://www.linkedin.com/in/buwaneka-ranatunga-649626103/')}>
                         <h1 className="social-title">In</h1>
                     </button>
-                    <button className="social-button">
+                    <button className="social-button" onClick={() => window.location.assign('https://www.behance.net/bsirinath338b')}>
                         {/* <img alt="git" src={GitLogo} className="social-logo" /> */}
-                        <h1 className="social-title">Tw</h1>
+                        <h1 className="social-title">Be</h1>
                     </button>
                     <button className="social-button">
                         <h1 className="social-title">S</h1>

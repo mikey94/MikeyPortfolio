@@ -1,8 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './About.scss';
-import IntroAboutBackground from '../../assets/staticImages/imageFour.png';
+import IntroAboutBackground from '../../assets/staticImages/imageTwo.png';
 import MeImage from '../../assets/staticImages/me_avatar_side.png';
-import AboutImage from '../../assets/staticImages/imageFour.png';
 import { client } from '../../lib/client';
 import { Progress } from 'antd';
 
@@ -12,21 +11,39 @@ type skill = {
     percentage: number
 }
 
+type certificate = {
+    certificate_name: string,
+    certificate_by: string
+}
+
 interface AboutPageProps {}
 
 const AboutPage: React.FunctionComponent<AboutPageProps> = () => {
-    const about_ref = useRef(null);
     const [skills, setSkills] = useState<Array<skill>>([]);
+    const [certificates, setCertificates] = useState<Array<certificate>>([]);
     const [error, setError] = useState<any>(false)
-    useEffect(() => {
+
+    const getSkills = () => {
         client.fetch(`*[_type == "skills"]{
             skill,
             percentage
         }`)
         .then((data: any) => setSkills(data))
         .catch((console) => setError(console.error))
-        
+    }
+    const getCertificates = () => {
+        client.fetch(`*[_type == "certificates"]{
+            certificate_name,
+            certificate_by
+        }`)
+        .then((data: any) => setCertificates(data))
+        .catch((console) => setError(console.error))
+    } 
+    useEffect(() => {
+        getSkills()
+        getCertificates()
     }, [])
+    
     return (
         <div className="home-wrapper-about">
                 <img alt='intro-background' src={IntroAboutBackground} className="intro-background-about"/>
@@ -77,24 +94,33 @@ const AboutPage: React.FunctionComponent<AboutPageProps> = () => {
                     }
                     </div>
                 </div>
-                <div ref={about_ref} className="about-wrapper-about">
-                    <div className='about-show-wrapper-about'>
-                        <h1>About my self and what i do...</h1>
-                        <button className="about-button-about">
-                            <h3>Show more..</h3>
-                        </button>
+                <div className="certificate-wrapper-about">
+                    <h1>Certifications</h1>
+                    <div className="certificate-list-wrapper">
+                        {
+                            certificates.length && 
+                            (
+                                certificates.map((certificate) => {
+                                    return (
+                                        <div className="certificate-item">
+                                            <h3>{certificate.certificate_name}</h3>
+                                            <h4>{certificate.certificate_by}</h4>
+                                        </div>
+                                    )
+                                })
+                            )
+                        }
                     </div>
-                    <img alt="logo" className="intro-image-logo-about" src={AboutImage} />
                 </div>
                 <div className="find-me-wrapper-about">
                     <h1>Find me on.</h1>
                     <div className="social-connect-about">
-                        <button className="social-button-about">
+                        <button className="social-button-about" onClick={() => window.location.assign('https://www.linkedin.com/in/buwaneka-ranatunga-649626103/')}>
                             <h1 className="social-title-about">In</h1>
                         </button>
-                        <button className="social-button-about">
+                        <button className="social-button-about" onClick={() => window.location.assign('https://www.behance.net/bsirinath338b')}>
                             {/* <img alt="git" src={GitLogo} className="social-logo" /> */}
-                            <h1 className="social-title-about">Tw</h1>
+                            <h1 className="social-title-about">Be</h1>
                         </button>
                         <button className="social-button-about">
                             <h1 className="social-title-about">S</h1>

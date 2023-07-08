@@ -33,7 +33,7 @@
 .intro-desc-about {
     display: flex;
     flex-direction: column;
-    padding: 10px 0 0 20px;
+    padding: 10px 0 0px 10px;
     font-size: 20px;
     align-self: center;
 }
@@ -76,35 +76,15 @@ button {
     }
 }
 
-.about-wrapper-about {
+.certificate-wrapper-about {
     display: flex;
     flex: 1;
-    flex-direction: row;
+    flex-direction: column;
     background-color: $main;
-    align-items: center;
+    align-items: flex-start;
     text-align: center;
     justify-content: center;
     padding: 50px 100px 50px 100px;
-}
-
-.about-show-wrapper-about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.about-button-about {
-    display: flex;
-    background-color: $green;
-    align-items: center;
-    justify-content: center;
-    border-radius: 30px;
-    height: 50px;
-    width: 250px;
-    border: 0;
-    box-shadow: 3px 3px 3px $secondary;
-    margin: 20px;
-    cursor: pointer;
 }
 
 .skills-wrapper-about {
@@ -212,6 +192,18 @@ button {
     display: flex;
 }
 
+.certificate-list-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    text-align: left;
+}
+
+.certificate-item {
+    display: flex;
+    flex-direction: column;
+}
+
 @media screen and (max-width: 600px) {
     .intro-background-about {
         height: 25rem;
@@ -225,7 +217,6 @@ button {
         flex: 1;
         position: absolute;
         text-align: left;
-        padding: 0 0 0 30px;
     }
     .intro-image-logo-about {
         margin: 0rem;
@@ -233,18 +224,13 @@ button {
     .intro-wrapper-about {
         padding: 50px 30px 50px 30px;
     }
-    .about-wrapper-about {
+    .certificate-wrapper-about {
         padding: 50px 30px 50px 30px;
     }
     .skills-wrapper-about {
         padding: 50px 30px 50px 30px;
     }
     .project-show-wrapper-about {
-        flex: 1;
-        position: absolute;
-        z-index: 10;
-    }
-    .about-show-wrapper-about {
         flex: 1;
         position: absolute;
         z-index: 10;
@@ -304,6 +290,15 @@ button {
     .skill-progress-layout {
         flex: 1;
         flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    .certificate-list-wrapper {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+    .certificate-item {
+        display: flex;
         flex-direction: column;
     }
 }

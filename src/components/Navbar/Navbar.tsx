@@ -38,7 +38,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = (props) => {
                     <h4 onClick={()=> navigate('/')}>Home</h4>
                     <h4 onClick={()=> navigate('projects')}>Projects</h4>
                     <h4 onClick={()=> navigate('about')}>About</h4>
-                    <h4>Contact</h4>
+                    {/* <h4>Contact</h4> */}
                 </div>
                 <div className="menu-mobile" onClick={onNavClick}>
                     <FontAwesomeIcon icon={faBars} size="2x" className="bars-style" />
@@ -48,7 +48,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = (props) => {
                 <h4 onClick={()=> navigate('/')}>Home</h4>
                 <h4 onClick={()=> navigate('projects')}>Projects</h4>
                 <h4 onClick={()=> navigate('about')}>About</h4>
-                <h4>Contact</h4>
+                {/* <h4>Contact</h4> */}
             </div>
             <Outlet />
         </div>
