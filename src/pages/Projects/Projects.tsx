@@ -6,6 +6,7 @@ import ProjectItem from './ProjectItem';
 import { client } from '../../lib/client';
 
 type project = {
+    id: number,
     name: string,
     description: string,
     images: any,
@@ -20,6 +21,7 @@ function Projects() {
     const [error, setError] = useState<any>(false)
     useEffect(() => {
         client.fetch(`*[_type == "projects"]{
+            id,
             name,
             description,
             images[]{
@@ -43,7 +45,7 @@ function Projects() {
                     {
                         projects.map((item, index) => {
                             return (
-                                <ProjectItem key={index} name={item.name} images={item.images}/>
+                                <ProjectItem key={index} id={item.id} name={item.name} images={item.images}/>
                             )
                         })
                     }
