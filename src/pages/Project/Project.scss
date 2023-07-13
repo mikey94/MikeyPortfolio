@@ -1,55 +1,56 @@
 @import '../../utils/colors/colors.scss';
 
-.home-wrapper-project {
+
+.home-wrapper-project-item {
     overflow-x: hidden;
     max-width: 100%;
 }
-.intro-background-project {
+.intro-background-project-item {
     display: flex;
     height: 35rem;
     width: 100%;
     object-fit: cover;
 }
-.intro-wrapper-project {
+.intro-wrapper-project-item {
     display: flex;
     flex: 1;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: $main;
-    padding: 50px 100px 50px 100px;
 }
 
-.intro-title-project {
-    font-size: 5rem;
+.intro-title-project-item {
+    font-size: 3rem;
+    margin-left: 2rem;
 }
 
-.social-title-project {
+.social-title-project-item {
     font-size: 4rem;
     margin: 0 !important;
     padding: 0 !important;
 }
 
-.intro-desc-project {
+.intro-desc-project-item {
     display: flex;
+    flex: 3;
     flex-direction: column;
-    padding: 10px 0 0 20px;
+    padding: 20px 0 0 20px;
     font-size: 20px;
-    align-self: center;
 }
 
-.intro-image-project {
+.intro-image-project-item {
     display: flex;
+    flex: 2;
     justify-content: flex-end;
 }
 
-.intro-image-logo-project {
+.intro-image-logo-project-item {
     display: flex;
     width: 35rem;
     height: 25rem;
-    // margin: 2rem;
+    margin: 2rem;
     object-fit: cover;
-    opacity: 0.7;
+    opacity: 0.6;
 }
 
 h1 {
@@ -76,82 +77,50 @@ button {
     }
 }
 
-.about-wrapper-project {
+.projects-wrapper-project-item {
     display: flex;
     flex: 1;
-    flex-direction: row;
-    background-color: $main;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    padding: 50px 100px 50px 100px;
-}
-
-.about-show-wrapper-project {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.about-button-project {
-    display: flex;
-    background-color: $green;
-    align-items: center;
-    justify-content: center;
-    border-radius: 30px;
-    height: 50px;
-    width: 250px;
-    border: 0;
-    box-shadow: 3px 3px 3px $secondary;
-    margin: 20px;
-    cursor: pointer;
-}
-
-.projects-wrapper-project {
-    display: flex;
-    flex: 1;
+    flex-wrap: wrap;
     flex-direction: row;
     background-color: $secondary;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-around;
     padding: 50px 100px 50px 100px;
 }
-.project-show-wrapper-project {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.item-list-project {
+.project-item-wrapper-project-item {
     display: flex;
     flex: 1;
-    width: 60rem;
-    white-space: nowrap;
-    flex-direction: row;
-    position: relative;
-    overflow-x: scroll;
-    white-space: nowrap;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    text-align: left;
+    align-items: flex-start;
+    flex-direction: column;
+
+    .project-item-description {
+        display: flex;
+        flex-direction: column;
+        // padding: 20px;
+    }
+
+    .project-link-project-item {
+        display: flex; 
+        flex-direction: row;
+        align-items: center;
+        a {
+            color: $green;
+            font-size: 20px;
+        }
+    }
+
+    .project-image {
+        // width: 200px;
+        width: 20rem;
+        // aspect-ratio: 1;
+        object-fit: cover;
+        padding: 5px;
+    }
 }
 
-.project-button-project {
-    display: flex;
-    background-color: $green;
-    align-items: center;
-    justify-content: center;
-    border-radius: 30px;
-    height: 50px;
-    width: 250px;
-    border: 0;
-    box-shadow: 3px 3px 3px $secondary;
-    margin: 20px;
-    cursor: pointer;
-}
-
-.find-me-wrapper-project {
+.find-me-wrapper-project-item {
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -161,13 +130,13 @@ button {
     padding: 50px 100px 50px 100px;
 }
 
-.social-connect-project {
+.social-connect-project-item {
     display: flex;
     flex-direction: row;
     margin-top: 50px;
 }
 
-.social-button-project {
+.social-button-project-item {
     display: flex;
     background-color: $green;
     border-radius: 50rem;
@@ -180,105 +149,127 @@ button {
     cursor: pointer;
 }
 
-.social-logo-project {
+.social-logo-project-item {
     width: 8rem;
     height: 8rem;
 }
 
-.all-rights-wrapper-project {
+.all-rights-wrapper-project-item {
     display: flex;
     justify-content: flex-end;
     background-color: $green;
     padding-right: 50px;
 }
 
-@media screen and (max-width: 600px) {
-    .intro-background-project {
+@media screen and (max-width: 480px) {
+    .intro-background-project-item {
         height: 25rem;
     }
-    .intro-image-project {
+    .intro-image-project-item {
         flex: 1;
         justify-content: center;
         opacity: 0.2;
     }
-    .intro-desc-project {
+    .intro-wrapper-project-item {
         flex: 1;
-        position: absolute;
-        text-align: left;
-        padding: 0 0 0 30px;
+        height: auto;
+        z-index: 10;
     }
-    .intro-image-logo-project {
+    .intro-desc-project-item {
+        flex: 1;
+        text-align: left;
+    }
+    .intro-image-logo-project-item {
         margin: 0rem;
     }
-    .intro-wrapper-project {
+    .projects-wrapper-project-item {
         padding: 50px 30px 50px 30px;
     }
-    .about-wrapper-project {
-        padding: 50px 30px 50px 30px;
+    .project-item-wrapper-project-item {
+    
+        .project-item-description {
+            padding: 20px;
+        }
+
+        .project-image {
+            // width: 200px;
+            width: 20rem;
+        }
+    
     }
-    .projects-wrapper-project {
-        padding: 50px 30px 50px 30px;
-    }
-    .project-show-wrapper-project {
-        flex: 1;
-        position: absolute;
-        z-index: 10;
-    }
-    .about-show-wrapper-project {
-        flex: 1;
-        position: absolute;
-        z-index: 10;
-    }
-    .item-list-project {
-        width: 30rem;
-        margin-left: 10rem;
-    }
-    .contact-wrapper-project {
-        padding: 50px 30px 50px 30px;
-    }
-    .contact-input-email-project {
-        width: 15rem;
-    }
-    .contact-input-message-project {
-        width: 15rem;
-    }
-    .all-rights-wrapper-project {
+    .all-rights-wrapper-project-item {
         padding-right: 0 !important;
     }
-    .find-me-wrapper-project {
+    .find-me-wrapper-project-item {
         padding: 50px 30px 50px 30px;
     }
-    .social-connect-project {
+    .social-connect-project-item {
         padding: 0 10px 0 10px;
     }
-    .social-title-project {
+    .social-title-project-item {
         font-size: 3rem;
         margin: 0 !important;
     }
-    .social-button-project {
+    .social-button-project-item {
         height: 5rem;
         width: 5rem;
         margin: 10px;
     }
-    .social-logo-project {
+    .social-logo-project-item {
         height: 4rem;
         width: 4rem;
     }
 }
 
-@media screen and (min-width: 600px) {
-    // .intro-image {
-    //     flex: 1;
-    //     justify-content: center;
-    //     opacity: 0.2;
-    // }
-    // .intro-desc {
-    //     flex: 1;
-    //     position: absolute;
-    //     text-align: center;
-    //     padding: 20px 0 10px 10px;
-    // }
-    // .intro-image-logo {
-    //     margin: 0rem;
-    // }
+// ipads, tablets
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .intro-desc {
+        position: absolute;
+    }
+    .intro-image {
+        justify-content: center;
+        opacity: 0.3;
+    }
+    .project-show-wrapper {
+        flex: 1;
+        position: absolute;
+        z-index: 10;
+    }
+    .about-show-wrapper {
+        flex: 1;
+        position: absolute;
+        z-index: 10;
+    }
+}
+// small screens, laptops
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .intro-wrapper {
+        padding: 50px 50px 50px 50px;
+    }
+    .intro-image-logo {
+        width: 20rem;
+    }
+    .project-item-wrapper-project-item {
+        .project-image {
+            width: 25rem;
+        }
+    }
+}
+// large screens
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    .project-item-wrapper-project-item {
+        .project-image {
+            width: 40rem;
+            aspect-ratio: 1;
+        }
+    }
+}
+// extra large
+@media screen and (min-width: 1201px) {
+    .project-item-wrapper-project-item {
+        .project-image {
+            width: 40rem;
+            aspect-ratio: 1;
+        }
+    }
 }

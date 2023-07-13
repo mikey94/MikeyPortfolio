@@ -18,4 +18,18 @@ const useOutsideClick = (callback: Function) => {
     return ref;
 };
 
-export { useOutsideClick };
+function useOutsideAlerter(ref: any, ref2:any, onOutSideClick: () => void) {
+    useEffect(() => {
+      function handleClickOutside(event: { target: any; }) {
+        if (ref.current && !ref.current.contains(event.target) && !ref2.current.contains(event.target)) {
+          onOutSideClick()
+        }
+      }
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [onOutSideClick, ref]);
+  }
+
+export { useOutsideClick, useOutsideAlerter };

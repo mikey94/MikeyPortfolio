@@ -1,9 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './ProjectItem.scss';
 import IntroProjectBackground from '../../assets/staticImages/imageEight.png';
 import { client } from '../../lib/client';
 import imageUrlBuilder from '@sanity/image-url';
-import { SanityImageSource } from '@sanity/image-url/lib/types/types';
 
 type ImageObj = {
   asset: {
@@ -12,6 +12,7 @@ type ImageObj = {
 }
 
 interface ProjectProps {
+  id: number,
   name: string,
   images: Array<ImageObj>
 }
@@ -22,14 +23,16 @@ function urlFor(source: any) {
   return builder.image(source)
 }
 
-function ProjectItem({ name, images }: ProjectProps) {
-  console.log("images", images)
+function ProjectItem({ name, images, id }: ProjectProps) {
+  const navigate = useNavigate();
+  const navigateTo = (id: number) => {
+    navigate(`project/${id}`)
+  }
   const image = images !== null ? urlFor(images[0].asset.url).url() : IntroProjectBackground
   return (
-    <div className='project-item-wrapper '>
+    <div className='project-item-wrapper ' onClick={()=> navigateTo(id)}>
         <img alt='projectImage' src={image} className='project-item-image' />
         <h3 className='project-name'>{name}</h3>
-        {/* <h3>Description</h3> */}
     </div>
   )
 }
