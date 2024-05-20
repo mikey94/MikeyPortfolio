@@ -260,7 +260,11 @@ button {
     .project-item-wrapper-project-item {
         .project-image {
             width: 40rem;
-            aspect-ratio: 1;
+            height: 30rem;
+            // aspect-ratio: 1;
+            background-color: $main;
+            object-fit: contain;
+            margin: 1rem;
         }
     }
 }
@@ -269,7 +273,11 @@ button {
     .project-item-wrapper-project-item {
         .project-image {
             width: 40rem;
-            aspect-ratio: 1;
+            height: 30rem;
+            // aspect-ratio: 1;
+            object-fit: contain;
+            background-color: $main;
+            margin: 2rem;
         }
     }
 }
