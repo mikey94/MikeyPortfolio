@@ -43,7 +43,7 @@ function Projects() {
                 </div>
                 <div className="projects-wrapper-project">
                     {
-                        projects.map((item, index) => {
+                        projects.toSorted((a, b) => b.id - a.id).map((item) => {
                             return (
                                 <ProjectItem key={item.id} id={item.id} name={item.name} images={item.images}/>
                             )
