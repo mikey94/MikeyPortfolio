@@ -58,7 +58,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
                 </div>
             </div>
             <div className="all-rights-wrapper">
-                <h3>@2022 all rights reserved..</h3>
+                <h3>@2025 all rights reserved..</h3>
             </div>
         </div>
     );

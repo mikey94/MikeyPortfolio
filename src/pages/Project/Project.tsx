@@ -88,7 +88,7 @@ const ProjectPage: React.FunctionComponent<ProjectPageProps> = () => {
                 </div>
             </div>
             <div className="all-rights-wrapper-project-item">
-                <h3>@2022 all rights reserved..</h3>
+                <h3>@2025 all rights reserved..</h3>
             </div>
         </div>
     );
