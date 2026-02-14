@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
-import IntroBackground from '../../assets/staticImages/imageOne.png';
-import IntroImage from '../../assets/staticImages/me_avatar.png';
-import ProjectImage from '../../assets/staticImages/imageThree.png';
-import AboutImage from '../../assets/staticImages/imageFour.png'
+import IntroBackground from '../../assets/images/imageOne.png';
+import IntroImage from '../../assets/images/me_avatar.png';
+import ProjectImage from '../../assets/images/imageThree.png';
+import AboutImage from '../../assets/images/imageFour.png'
 import './Home.scss';
 import { useNavigate } from 'react-router-dom';
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './About.scss';
-import IntroAboutBackground from '../../assets/staticImages/imageTwo.png';
-import MeImage from '../../assets/staticImages/me_avatar_side.png';
+import IntroAboutBackground from '../../assets/images/imageTwo.png';
+import MeImage from '../../assets/images/me_avatar_side.png';
 import { client } from '../../lib/client';
 import { Progress } from 'antd';
 

@@ -1,6 +1,6 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import IntroBackground from '../../assets/staticImages/imageNine.png';
+import IntroBackground from '../../assets/images/imageNine.png';
 import './Project.scss';
 import { client } from '../../lib/client';
 import imageUrlBuilder from '@sanity/image-url';
