@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './ProjectItem.scss';
-import IntroProjectBackground from '../../assets/staticImages/imageEight.png';
+import IntroProjectBackground from '../../assets/images/imageEight.png';
 import { client } from '../../lib/client';
 import imageUrlBuilder from '@sanity/image-url';
 

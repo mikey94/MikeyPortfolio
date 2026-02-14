@@ -1,7 +1,6 @@
-import React, { useRef, useEffect, useState } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import './Projects.scss';
-import IntroProjectBackground from '../../assets/staticImages/imageFive.png';
-import ProjectImage from '../../assets/staticImages/imageThree.png';
+import IntroProjectBackground from '../../assets/images/imageFive.png';
 import ProjectItem from './ProjectItem';
 import { client } from '../../lib/client';
 
