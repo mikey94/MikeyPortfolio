@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 const useOutsideClick = (callback: Function) => {
     const ref = useRef<HTMLDivElement>(null);
@@ -14,7 +14,7 @@ const useOutsideClick = (callback: Function) => {
         return () => {
             document.removeEventListener('click', handleClick, true);
         };
-    }, [ref]);
+    }, [ref, callback]);
     return ref;
 };
 
@@ -29,7 +29,7 @@ function useOutsideAlerter(ref: any, ref2:any, onOutSideClick: () => void) {
       return () => {
         document.removeEventListener("mousedown", handleClickOutside);
       };
-    }, [onOutSideClick, ref]);
+    }, [onOutSideClick, ref, ref2]);
   }
 
 export { useOutsideClick, useOutsideAlerter };

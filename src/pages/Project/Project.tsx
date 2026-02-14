@@ -25,6 +25,7 @@ const ProjectPage: React.FunctionComponent<ProjectPageProps> = () => {
     const params = useParams()
     const [project, setProjects] = useState<project>()
     const [error, setError] = useState<any>(false)
+    console.log(error)
     useEffect(() => {
         client.fetch(`*[_type == "projects"]{
             id,
