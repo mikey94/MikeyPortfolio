@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import './Navbar.scss';
 import logo from '../../assets/buwa_right.png';

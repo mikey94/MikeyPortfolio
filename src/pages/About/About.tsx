@@ -31,6 +31,7 @@ const AboutPage: React.FunctionComponent<AboutPageProps> = () => {
         .then((data: any) => setSkills(data))
         .catch((console) => setError(console.error))
     }
+    console.log(error)
     const getCertificates = () => {
         client.fetch(`*[_type == "certificates"]{
             certificate_name,

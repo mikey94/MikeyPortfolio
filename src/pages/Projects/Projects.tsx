@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './Projects.scss';
 import IntroProjectBackground from '../../assets/images/imageFive.png';
 import ProjectItem from './ProjectItem';
@@ -14,10 +14,9 @@ type project = {
 
 
 function Projects() {
-    const about_ref = useRef(null);
-    const arr = [1,2,3,4,5]
     const [projects, setProjects] = useState<Array<project>>([])
     const [error, setError] = useState<any>(false)
+    console.log(error)
     useEffect(() => {
         client.fetch(`*[_type == "projects"]{
             id,
