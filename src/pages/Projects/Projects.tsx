@@ -38,14 +38,14 @@ function Projects() {
                 <img alt='intro-background' src={IntroProjectBackground} className="intro-background-project"/>
                 <div className="intro-wrapper-project">
                     <div className="intro-desc-project">
-                        <h1 className="intro-title-project">Projects i had worked ...</h1>
+                        <h1 className="intro-title-project">Projects i have worked on...</h1>
                     </div>
                 </div>
                 <div className="projects-wrapper-project">
                     {
                         projects.map((item, index) => {
                             return (
-                                <ProjectItem key={index} id={item.id} name={item.name} images={item.images}/>
+                                <ProjectItem key={item.id} id={item.id} name={item.name} images={item.images}/>
                             )
                         })
                     }
@@ -66,7 +66,7 @@ function Projects() {
                     </div>
                 </div>
                 <div className="all-rights-wrapper-project">
-                    <h3>@2022 all rights reserved..</h3>
+                    <h3>@2025 all rights reserved..</h3>
                 </div>
             </div>
     )
