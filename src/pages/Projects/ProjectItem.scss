@@ -1,3 +1,5 @@
+@use "../../utils/breakpoint" as *;
+
 .project-item-wrapper {
     display: flex;
     flex-direction: column;
@@ -15,4 +17,17 @@
     aspect-ratio: 1;
     object-fit: cover;
     cursor: pointer;
+    border-radius: 10px;
+    
+    @include mq("mobile-lg") {
+        width: 10rem;
+    }
+
+    @include mq("tablet") {
+        width: 15rem;
+    }
+
+    @include mq("desktop") {
+        width: 20rem;
+    }
 }
