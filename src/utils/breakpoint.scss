@@ -1,11 +1,12 @@
 @use "sass:map";
 
 $breakpoints: (
-  "mobile-lg": 480px,
-  "tablet":    768px,
-  "tablet-lg": 1024px,
-  "desktop":   1200px,
-  "desktop-lg": 1400px
+    "mobile-sm": 320px,
+    "mobile-lg": 400px,
+    "tablet":    768px,
+    "tablet-lg": 1024px,
+    "desktop":   1200px,
+    "desktop-lg": 1400px
 );
 
 @mixin mq($key) {
