@@ -18,7 +18,11 @@
     object-fit: cover;
     cursor: pointer;
     border-radius: 10px;
-    
+
+    @include mq("mobile-sm") {
+        width: 10rem;
+    }
+
     @include mq("mobile-lg") {
         width: 10rem;
     }

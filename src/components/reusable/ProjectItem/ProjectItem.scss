@@ -12,6 +12,11 @@
     width: 300px;
     height: 300px;
 
+    @include mq("mobile-sm") {
+        width: 180px;
+        height: 180px;
+    }
+
     @include mq("mobile-lg") {
         width: 200px;
         height: 200px;
